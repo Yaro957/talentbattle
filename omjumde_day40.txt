@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+  string a,b,c;
+  cout<<"enter a string"<<endl;
+  getline(cin,a);
+  cout<<"enter the string to be removed"<<endl;
+  getline(cin,b);
+  int pos=a.find(b);
+  if(pos!=string::npos)
+  {
+      a.erase(pos,b.size());
+       cout<<"enter the new substring"<<endl;
+       getline(cin,c);
+       a.insert(pos,c);
+       cout<<a;
+  }
+  else
+  {
+      cout<<"string not found"<<endl; 
+  }
+ 
+    return 0;
+}

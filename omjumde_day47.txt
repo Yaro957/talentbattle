@@ -1,0 +1,49 @@
+#include <bits/stdc++.h>
+using namespace std;
+int pal(int num)
+{
+    int rev=0;
+    int temp=num;
+    while(temp>0)
+    {
+        int temp1=temp%10;
+        rev=rev*10+temp1;
+        temp=temp/10;
+    }
+    if(num==rev)
+    {
+        return 1;
+    }
+    else
+    return 0;
+    
+    
+    
+    
+}
+int main()
+{
+ int a,pos=0,max=0;
+ cout<<"enter the size of the first array"<<endl;
+ cin>>a;
+ int b[a], c[a];
+ cout<<"enter the elements"<<endl;
+ for(int i=0;i<a;i++)
+ { 
+     cin>>b[i];
+     int temp=pal(b[i]);
+     if(temp==1)
+     {
+         c[pos]=b[i];
+         pos++;
+     }
+ }
+   for(int i=0;i<a;i++)
+   {
+       if(max<c[i])
+       {
+           max=c[i];
+       }
+   }
+ cout<<max;
+}

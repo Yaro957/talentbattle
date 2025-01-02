@@ -1,0 +1,38 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+  string a,b;
+  bool istrue=true;
+  cout<<"enter a string with wildcard chracters(* and ?)"<<endl;
+  getline(cin,a);
+  cout<<"enter a normal string "<<endl;
+  getline(cin,b);
+  if(a.size()==b.size())
+  {
+     for(int i=0;i<a.size();i++)
+     {
+         if(a[i]==b[i]||a[i]=='*'||a[i]=='?')
+         {
+             continue;
+         }
+         else
+         {
+             istrue=false;
+             break;
+         }
+     }
+     
+  }
+  
+  if(istrue)
+     {
+         cout<<"yes they match"<<endl;
+     }
+  else
+  {
+      cout<<"no they dont match"<<endl; 
+  }
+ 
+    return 0;
+}

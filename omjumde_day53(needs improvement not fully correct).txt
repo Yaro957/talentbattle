@@ -1,0 +1,50 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+	int result=1,max=0,pos;
+	int min,temp;
+	int a;
+	cin>>a;
+	int b[a],c[a-1];
+	for(int i=0; i<a; i++)
+	{
+		cin>>b[i];
+	}
+
+	for(int i=0; i<a; i++)
+	{
+		min=i;
+		for(int j=i; j<a; j++)
+		{
+			if(b[min]>b[j])
+			{
+				min=j;
+			}
+		}
+		swap(b[min],b[i]);
+
+	}
+	for(int i=0;i<a;i++)
+	{
+	    cout<<b[i]<<" ";
+	}
+	for(int i=a; i>=1; i--)
+	{
+			result*=b[i];
+			if(max<result)
+			{
+			 max=result;
+			 pos=i;
+			}
+	}
+	
+	cout<<max<<" = {";
+	while(pos!=4)
+	{
+	    cout<<b[pos]<<" ";
+	    pos++;
+	}
+	cout<<"}";
+
+}

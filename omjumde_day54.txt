@@ -1,0 +1,41 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+	int a;
+	cin>>a;
+	bool match=false;
+	int b[a];
+	for(int i=0; i<a; i++)
+	{
+		cin>>b[i];
+	}
+	int c;
+	cin>>c;
+	int d[c];
+	for(int i=0; i<c; i++)
+	{
+		cin>>d[i];
+	}
+	for(int i=0;i<a;i++)
+	{
+	    for(int j=0;j<c;j++)
+	    {
+	        if(b[i]==d[j])
+	        {
+	            match=true;
+	        }
+	    }
+	}
+	if(match)
+	{
+	    cout<<"not a disjoint"<<endl;
+	}
+	else
+	{
+	    cout<<"disjoint"<<endl;
+	}
+
+	
+
+}

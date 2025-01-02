@@ -1,0 +1,41 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+ int a,b;
+ bool istrue=true;
+ cout<<"enter the size of the first array"<<endl;
+ cin>>a;
+ cout<<"enter the size of the second array"<<endl;
+ cin>>b;
+ int c[a],d[b];
+ cout<<"enter the size of the first array"<<endl;
+ for(int i=0;i<a;i++)
+ {
+     cin>>c[i];
+ }
+ cout<<"enter the size of the second array"<<endl;
+ for(int i=0;i<a;i++)
+ {
+     cin>>d[i];
+ }
+ if(a==b)
+ {
+     for(int i=0;i<a;i++)
+     {
+         if(c[i]!=d[i])
+         {
+             istrue =false;
+             break;
+         }
+     }
+ }
+ if(istrue)
+ {
+     cout<<"yes they are same"<<endl;
+ }
+ else
+ {
+     cout<<"not they are not same"<<endl;
+ }
+}

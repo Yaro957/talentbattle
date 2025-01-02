@@ -1,0 +1,20 @@
+   #include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+  string a;
+  long long int frequency[256]={0};
+  getline(cin,a);
+  for (int i=0;i<a.size();i++)
+  {
+      frequency[int(a[i])]++;
+      
+  }
+  for(int i=0;i<256;i++)
+  {
+      if(frequency[i]!=0)
+      cout<<"the frequency of"<<char(i)<<" is "<<frequency[i]<<" times"<<endl;
+  }
+
+    return 0;
+}
