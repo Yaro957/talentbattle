@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+  string a;
+  bool ispalindrome=true;
+  getline(cin,a);
+  for(int i=0;i<a.size();i++)
+  {
+      
+      
+      if(a[i]!=a[a.size()-i-1])
+      {
+          ispalindrome=false;
+          break;
+      }
+      
+      
+    
+  }
+if(ispalindrome==true)
+{
+    cout<<"palindrome";
+}
+else{
+    cout<<"not a Palindrome";
+}
+
+    return 0;
+}
